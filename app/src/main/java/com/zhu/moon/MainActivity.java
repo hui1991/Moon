@@ -6,6 +6,7 @@ import android.os.Bundle;
 public class MainActivity extends AppCompatActivity {
     private String TestCommit1;
     private String TestCommit2;
+    private String TestCommit3;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
