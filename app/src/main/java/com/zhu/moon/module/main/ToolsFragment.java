@@ -1,5 +1,6 @@
 package com.zhu.moon.module.main;
 
+import com.zhu.moon.R;
 import com.zhu.moon.base.BaseFragment;
 
 /**
@@ -8,4 +9,8 @@ import com.zhu.moon.base.BaseFragment;
 
 public class ToolsFragment extends BaseFragment {
 
+    @Override
+    protected int getLayoutId() {
+        return R.layout.fragment_tools;
+    }
 }
