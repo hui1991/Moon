@@ -1,5 +1,7 @@
 package com.zhu.moon.utils;
 
+import android.hardware.Camera;
+
 /**
  * Created by zhuguangjun on 2018/6/19.
  */
@@ -36,5 +38,33 @@ public class CommonUtils {
         FIRST_TIME = currentTime;
         PRE_BUTTON_ID = buttonId;
         return false;
+    }
+
+    /**
+     * 通过尝试打开相机的方式判断有无拍照权限（在6.0以下使用拥有root权限的管理软件可以管理权限）
+     *
+     * @return 是否有相机权限.
+     */
+    public static boolean cameraIsCanUse() {
+
+        boolean isCanUse = true;
+        Camera mCamera = null;
+        try {
+            mCamera = Camera.open();
+            Camera.Parameters mParameters = mCamera.getParameters();
+            mCamera.setParameters(mParameters);
+        } catch (Exception e) {
+            isCanUse = false;
+        }
+
+        if (mCamera != null) {
+            try {
+                mCamera.release();
+            } catch (Exception e) {
+                e.printStackTrace();
+                return isCanUse;
+            }
+        }
+        return isCanUse;
     }
 }
