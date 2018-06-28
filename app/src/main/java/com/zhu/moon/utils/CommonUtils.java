@@ -1,6 +1,7 @@
 package com.zhu.moon.utils;
 
 import android.hardware.Camera;
+import android.view.View;
 
 /**
  * Created by zhuguangjun on 2018/6/19.
@@ -43,7 +44,7 @@ public class CommonUtils {
     /**
      * 通过尝试打开相机的方式判断有无拍照权限（在6.0以下使用拥有root权限的管理软件可以管理权限）
      *
-     * @return 是否有相机权限.
+     * @return 是否有相机权限.当普通判断权限方法失效时使用
      */
     public static boolean cameraIsCanUse() {
 
@@ -66,5 +67,22 @@ public class CommonUtils {
             }
         }
         return isCanUse;
+    }
+
+    /**
+     * 弹出权限提示框
+     */
+    public static void showPermissionsPop(){
+//        PageDialogWithTwoButton.getInstance(mContext)
+//                .setContent("您已禁止授权搭伙相机权限，可能会造成功能不可用，如需使用请到设置里授予权限")
+//                .setLeftBtnText("取消")
+//                .setRightBtnText("去设置")
+//                .setRightBtnListener(new View.OnClickListener() {
+//                    @Override
+//                    public void onClick(View v) {
+//                        getActivity().startActivity(IntentUtils.getApplicationInformationIntent(mContext.getPackageName()));
+//                    }
+//                })
+//                .show();
     }
 }
