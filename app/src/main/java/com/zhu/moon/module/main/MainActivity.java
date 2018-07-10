@@ -4,15 +4,13 @@ import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 import android.view.MenuItem;
-
 import com.zhu.moon.R;
 import com.zhu.moon.base.BaseActivity;
 import com.zhu.moon.base.BaseFragment;
+import com.zhu.moon.module.home.HomeFragment;
 import com.zhu.moon.utils.BottomNavigationViewHelper;
 import com.zhu.moon.view.NoScrollViewPager;
-
 import java.util.ArrayList;
-
 import butterknife.BindView;
 
 public class MainActivity extends BaseActivity implements BottomNavigationView.OnNavigationItemSelectedListener {

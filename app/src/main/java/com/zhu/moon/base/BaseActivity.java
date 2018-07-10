@@ -29,4 +29,18 @@ public abstract class BaseActivity extends AppCompatActivity {
      * @return 布局id
      */
     protected abstract int getLayoutId();
+
+    /**
+     * 展示正常view
+     */
+    protected void showNormalView(){
+
+    }
+
+    /**
+     * 展示错误view
+     */
+    protected void showErrorView(){
+
+    }
 }

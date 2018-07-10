@@ -1,7 +1,6 @@
 package com.zhu.moon.utils;
 
 import android.hardware.Camera;
-import android.view.View;
 
 /**
  * Created by zhuguangjun on 2018/6/19.

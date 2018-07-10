@@ -38,5 +38,17 @@ public abstract class BaseFragment extends Fragment {
      */
     protected abstract int getLayoutId();
 
+    /**
+     * 展示正常view
+     */
+    protected void showNormalView(){
 
+    }
+
+    /**
+     * 展示错误view
+     */
+    protected void showErrorView(){
+
+    }
 }
