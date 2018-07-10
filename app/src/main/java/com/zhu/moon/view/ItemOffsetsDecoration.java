@@ -3,7 +3,6 @@ package com.zhu.moon.view;
 import android.graphics.Rect;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
-
 import com.zhu.moon.utils.UIUtils;
 
 /**
@@ -28,6 +27,6 @@ public class ItemOffsetsDecoration extends RecyclerView.ItemDecoration {
         if (position==count-1){
             bottomOffsets = 10;
         }
-        outRect.set(UIUtils.dp2px(parent.getContext(),5),UIUtils.dp2px(parent.getContext(),topOffsets),UIUtils.dp2px(parent.getContext(),5),UIUtils.dp2px(parent.getContext(),bottomOffsets));
+        outRect.set(0,UIUtils.dp2px(parent.getContext(),topOffsets),0,UIUtils.dp2px(parent.getContext(),bottomOffsets));
     }
 }

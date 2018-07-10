@@ -8,7 +8,6 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 import com.zhu.moon.R;
 import com.zhu.moon.data.bean.ArticleBean;
-
 import java.util.List;
 
 /**
@@ -33,7 +32,8 @@ public class HomeListAdapter extends RecyclerView.Adapter<HomeListAdapter.ViewHo
 
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        return new ViewHolder(LayoutInflater.from(mContext).inflate(R.layout.item_home_list,parent,false));
+        View view = LayoutInflater.from(mContext).inflate(R.layout.item_home_list, parent, false);
+        return new ViewHolder(view);
     }
 
     @Override

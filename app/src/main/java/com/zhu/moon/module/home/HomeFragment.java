@@ -9,8 +9,12 @@ import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import com.zhu.moon.R;
 import com.zhu.moon.base.BaseFragment;
+import com.zhu.moon.data.bean.ArticleBean;
 import com.zhu.moon.data.bean.ArticleModelContent;
 import com.zhu.moon.view.ItemOffsetsDecoration;
+
+import java.util.ArrayList;
+import java.util.List;
 
 import butterknife.BindView;
 
@@ -20,7 +24,6 @@ import butterknife.BindView;
  */
 
 public class HomeFragment extends BaseFragment {
-    public static final String TAG = "HomeFragment";
 
     @BindView(R.id.recyclerView)
     RecyclerView mRecyclerView;
@@ -33,6 +36,10 @@ public class HomeFragment extends BaseFragment {
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+        mAdapter = new HomeListAdapter(getActivity(),new ArrayList<ArticleBean>());
+        mRecyclerView.setAdapter(mAdapter);
+        mRecyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
+        mRecyclerView.addItemDecoration(new ItemOffsetsDecoration());
         mViewModel = ViewModelProviders.of(this).get(HomeViewModel.class);
         Observer<ArticleModelContent> articleListObserver = new Observer<ArticleModelContent>() {
             @Override
@@ -40,14 +47,7 @@ public class HomeFragment extends BaseFragment {
                 if (articleModelContent==null || articleModelContent.datas==null || articleModelContent.datas.size()==0){
                     return;
                 }
-                if (mAdapter ==null){
-                    mAdapter = new HomeListAdapter(getActivity(),articleModelContent.datas);
-                    mRecyclerView.setAdapter(mAdapter);
-                    mRecyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
-                    mRecyclerView.addItemDecoration(new ItemOffsetsDecoration());
-                }else{
-                    mAdapter.setData(articleModelContent.datas);
-                }
+                mAdapter.setData(articleModelContent.datas);
             }
         };
         mViewModel.getLiveData().observe(this,articleListObserver);
