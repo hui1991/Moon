@@ -1,6 +1,7 @@
 package com.zhu.moon.module.home;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -8,6 +9,8 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 import com.zhu.moon.R;
 import com.zhu.moon.data.bean.ArticleBean;
+import com.zhu.moon.web.WebViewActivity;
+
 import java.util.List;
 
 /**
@@ -41,6 +44,15 @@ public class HomeListAdapter extends RecyclerView.Adapter<HomeListAdapter.ViewHo
         holder.title.setText(mData.get(position).title);
         holder.author.setText(mData.get(position).author);
         holder.time.setText(mData.get(position).niceDate);
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                int viewLayoutPosition = ((RecyclerView.LayoutParams) v.getLayoutParams()).getViewLayoutPosition();
+                Intent intent = new Intent(mContext, WebViewActivity.class);
+                intent.putExtra(WebViewActivity.URL,mData.get(viewLayoutPosition).link);
+                mContext.startActivity(intent);
+            }
+        });
     }
 
     @Override
