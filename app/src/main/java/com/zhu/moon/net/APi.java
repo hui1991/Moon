@@ -5,5 +5,8 @@ package com.zhu.moon.net;
  */
 
 public class APi {
+//    public static final String BASE_URL = "http://123.182.243.138:10000/";
+
     public static final String BASE_URL = "http://www.wanandroid.com/";
+
 }

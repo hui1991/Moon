@@ -2,25 +2,21 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
         android:id="@+id/main_bottom_navigation_home"
-        android:enabled="true"
         android:icon="@mipmap/main_home_icon"
         android:title="@string/main_home"/>
 
     <item
         android:id="@+id/main_bottom_navigation_article"
-        android:enabled="true"
         android:icon="@mipmap/main_article_icon"
         android:title="@string/main_article"/>
 
     <item
         android:id="@+id/main_bottom_navigation_tools"
-        android:enabled="true"
         android:icon="@mipmap/main_tools_icon"
         android:title="@string/main_tools"/>
 
     <item
         android:id="@+id/main_bottom_navigation_mine"
-        android:enabled="true"
         android:icon="@mipmap/main_mine_icon"
         android:title="@string/main_mine"/>
 </menu>
