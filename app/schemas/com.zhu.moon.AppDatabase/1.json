@@ -1,0 +1,331 @@
+{
+  "formatVersion": 1,
+  "database": {
+    "version": 1,
+    "identityHash": "8c2ed64cd1777ce35e589777ce194e5b",
+    "entities": [
+      {
+        "tableName": "userInfo",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `user_code` TEXT, `org_id` TEXT, `user_name` TEXT, `user_ddwid` TEXT, `user_addressps` TEXT, `org_name` TEXT, `org_code` TEXT, `user_ddwname` TEXT, `user_ddwcode` TEXT)",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "user_code",
+            "columnName": "user_code",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "org_id",
+            "columnName": "org_id",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "user_name",
+            "columnName": "user_name",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "user_ddwid",
+            "columnName": "user_ddwid",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "user_addressps",
+            "columnName": "user_addressps",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "org_name",
+            "columnName": "org_name",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "org_code",
+            "columnName": "org_code",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "user_ddwname",
+            "columnName": "user_ddwname",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "user_ddwcode",
+            "columnName": "user_ddwcode",
+            "affinity": "TEXT",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "id"
+          ],
+          "autoGenerate": true
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "clientInfo",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `ddwid` TEXT, `shkfkfs` TEXT, `DDW00000408` TEXT, `vdmessage` TEXT, `ddwname` TEXT, `addressps` TEXT, `lxr` TEXT, `yingshye` TEXT, `kehulb` TEXT, `yushk` TEXT, `zjm` TEXT)",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "ddwid",
+            "columnName": "ddwid",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "shkfkfs",
+            "columnName": "shkfkfs",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "DDW00000408",
+            "columnName": "DDW00000408",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "vdmessage",
+            "columnName": "vdmessage",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "ddwname",
+            "columnName": "ddwname",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "addressps",
+            "columnName": "addressps",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "lxr",
+            "columnName": "lxr",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "yingshye",
+            "columnName": "yingshye",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "kehulb",
+            "columnName": "kehulb",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "yushk",
+            "columnName": "yushk",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "zjm",
+            "columnName": "zjm",
+            "affinity": "TEXT",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "id"
+          ],
+          "autoGenerate": true
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "products",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `ddwid` TEXT, `baozhiqi` TEXT, `kcsl` TEXT, `danwei` TEXT, `pihao` TEXT, `dspname` TEXT, `shengccj` TEXT, `zdcbj` TEXT, `hescbj` TEXT, `dkfid` TEXT, `cbj` TEXT, `dspid` TEXT, `zhshj` TEXT, `picih` TEXT, `sxrq` TEXT, `dspspgg` TEXT, `vdmessage` TEXT, `vdvalue` TEXT, `dspcd` TEXT, `jwh` TEXT, `dkfname` TEXT, `hsj` TEXT, `zdckj` TEXT)",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "ddwid",
+            "columnName": "ddwid",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "baozhiqi",
+            "columnName": "baozhiqi",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "kcsl",
+            "columnName": "kcsl",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "danwei",
+            "columnName": "danwei",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "pihao",
+            "columnName": "pihao",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "dspname",
+            "columnName": "dspname",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "shengccj",
+            "columnName": "shengccj",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "zdcbj",
+            "columnName": "zdcbj",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "hescbj",
+            "columnName": "hescbj",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "dkfid",
+            "columnName": "dkfid",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "cbj",
+            "columnName": "cbj",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "dspid",
+            "columnName": "dspid",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "zhshj",
+            "columnName": "zhshj",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "picih",
+            "columnName": "picih",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "sxrq",
+            "columnName": "sxrq",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "dspspgg",
+            "columnName": "dspspgg",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "vdmessage",
+            "columnName": "vdmessage",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "vdvalue",
+            "columnName": "vdvalue",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "dspcd",
+            "columnName": "dspcd",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "jwh",
+            "columnName": "jwh",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "dkfname",
+            "columnName": "dkfname",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "hsj",
+            "columnName": "hsj",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "zdckj",
+            "columnName": "zdckj",
+            "affinity": "TEXT",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "id"
+          ],
+          "autoGenerate": true
+        },
+        "indices": [],
+        "foreignKeys": []
+      }
+    ],
+    "setupQueries": [
+      "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, \"8c2ed64cd1777ce35e589777ce194e5b\")"
+    ]
+  }
+}

@@ -1,0 +1,87 @@
+{
+  "formatVersion": 1,
+  "database": {
+    "version": 2,
+    "identityHash": "91503d6e2d423fd20b5d102f6b91bc6a",
+    "entities": [
+      {
+        "tableName": "userInfo",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `user_code` TEXT, `org_id` TEXT, `user_name` TEXT, `user_ddwid` TEXT, `user_addressps` TEXT, `org_name` TEXT, `org_code` TEXT, `user_ddwname` TEXT, `user_ddwcode` TEXT)",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "user_code",
+            "columnName": "user_code",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "org_id",
+            "columnName": "org_id",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "user_name",
+            "columnName": "user_name",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "user_ddwid",
+            "columnName": "user_ddwid",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "user_addressps",
+            "columnName": "user_addressps",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "org_name",
+            "columnName": "org_name",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "org_code",
+            "columnName": "org_code",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "user_ddwname",
+            "columnName": "user_ddwname",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "user_ddwcode",
+            "columnName": "user_ddwcode",
+            "affinity": "TEXT",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "id"
+          ],
+          "autoGenerate": true
+        },
+        "indices": [],
+        "foreignKeys": []
+      }
+    ],
+    "setupQueries": [
+      "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, \"91503d6e2d423fd20b5d102f6b91bc6a\")"
+    ]
+  }
+}

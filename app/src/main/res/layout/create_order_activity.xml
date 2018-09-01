@@ -1,0 +1,387 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".createOrder.ui.CreateOrderActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@android:color/white">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/client_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/common_margin"
+                android:layout_marginTop="@dimen/common_margin"
+                android:gravity="center"
+                android:text="客户名称"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/common_text_size_2"
+                android:ellipsize="end"
+                android:maxLines="1"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/client_name_edit"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/common_edit_height"
+                android:layout_marginLeft="@dimen/common_margin"
+                android:layout_marginRight="@dimen/common_margin"
+                android:layout_marginTop="@dimen/common_margin"
+                android:background="@drawable/shape_edit_rim_eeeeee"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@+id/client_name_search"
+                app:layout_constraintTop_toBottomOf="@+id/client_name"
+                android:paddingLeft="@dimen/common_padding_left"
+                android:ellipsize="end"
+                android:maxLines="1"/>
+
+            <Button
+                android:id="@+id/client_name_search"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/common_margin"
+                android:text="搜索"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/common_text_size_2"
+                app:layout_constraintBottom_toBottomOf="@+id/client_name_edit"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/client_name_edit" />
+
+            <View
+                android:id="@+id/temp_line_1"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/common_temp_height_1"
+                android:layout_marginTop="@dimen/common_margin"
+                android:background="@color/base_bg"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/client_name_edit" />
+
+            <TextView
+                android:id="@+id/contact"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_marginLeft="15dp"
+                android:gravity="center"
+                android:text="联系人"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/common_text_size_2"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/temp_line_1"/>
+
+            <TextView
+                android:id="@+id/contact_edit"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/common_edit_height"
+                android:layout_marginLeft="@dimen/common_margin"
+                android:layout_marginRight="@dimen/common_margin"
+                android:layout_marginTop="@dimen/common_margin"
+                android:background="@drawable/shape_edit_rim_eeeeee"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/contact"
+                android:gravity="center_vertical"
+                android:textSize="@dimen/common_text_size_2"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textColor="@android:color/black"
+                android:paddingLeft="@dimen/common_padding_left"/>
+
+            <View
+                android:id="@+id/temp_line_2"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/common_temp_height_1"
+                android:layout_marginTop="@dimen/common_margin"
+                android:background="@color/base_bg"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/contact_edit" />
+
+            <TextView
+                android:id="@+id/payment_methods"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/common_margin"
+                android:layout_marginTop="@dimen/common_margin"
+                android:gravity="center"
+                android:text="收款方式"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/common_text_size_2"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/temp_line_2" />
+
+            <TextView
+                android:id="@+id/payment_methods_edit"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/common_edit_height"
+                android:layout_marginLeft="@dimen/common_margin"
+                android:layout_marginRight="@dimen/common_margin"
+                android:layout_marginTop="@dimen/common_margin"
+                android:background="@drawable/shape_edit_rim_eeeeee"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/payment_methods"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/common_padding_left"
+                android:textSize="@dimen/common_text_size_2"
+                android:textColor="@android:color/black"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="@+id/payment_methods_edit"
+                app:layout_constraintBottom_toBottomOf="@+id/payment_methods_edit"
+                app:layout_constraintRight_toRightOf="@+id/payment_methods_edit"
+                android:layout_marginRight="@dimen/common_margin"
+                android:src="@mipmap/right_allow"/>
+
+            <View
+                android:id="@+id/temp_line_3"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/common_temp_height_1"
+                android:layout_marginTop="@dimen/common_margin"
+                android:background="@color/base_bg"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/payment_methods_edit" />
+
+            <TextView
+                android:id="@+id/invoice_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/common_margin"
+                android:layout_marginTop="@dimen/common_margin"
+                android:gravity="center_vertical"
+                android:text="发票类型"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/common_text_size_2"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/temp_line_3" />
+
+            <TextView
+                android:id="@+id/invoice_type_edit"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/common_edit_height"
+                android:layout_marginLeft="@dimen/common_margin"
+                android:layout_marginRight="@dimen/common_margin"
+                android:layout_marginTop="@dimen/common_margin"
+                android:background="@drawable/shape_edit_rim_eeeeee"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/invoice_type"
+                android:paddingLeft="@dimen/common_padding_left"
+                android:gravity="center_vertical"
+                android:textSize="@dimen/common_text_size_2"
+                android:textColor="@android:color/black"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="@+id/invoice_type_edit"
+                app:layout_constraintBottom_toBottomOf="@+id/invoice_type_edit"
+                app:layout_constraintRight_toRightOf="@+id/invoice_type_edit"
+                android:layout_marginRight="@dimen/common_margin"
+                android:src="@mipmap/right_allow"/>
+
+            <View
+                android:id="@+id/temp_line_4"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/common_temp_height_1"
+                android:layout_marginTop="@dimen/common_margin"
+                android:background="@color/base_bg"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/invoice_type_edit" />
+
+            <TextView
+                android:id="@+id/delivery_address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/common_margin"
+                android:layout_marginTop="@dimen/common_margin"
+                android:gravity="center"
+                android:text="送货地址"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/common_text_size_2"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/temp_line_4" />
+
+            <TextView
+                android:id="@+id/delivery_address_edit"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/common_edit_height"
+                android:layout_marginLeft="@dimen/common_margin"
+                android:layout_marginRight="@dimen/common_margin"
+                android:layout_marginTop="@dimen/common_margin"
+                android:background="@drawable/shape_edit_rim_eeeeee"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/delivery_address"
+                android:gravity="center_vertical"
+                android:textSize="@dimen/common_text_size_2"
+                android:paddingLeft="@dimen/common_padding_left"
+                android:textColor="@android:color/black"
+                android:ellipsize="end"
+                android:maxLines="1"/>
+
+            <View
+                android:id="@+id/temp_line_5"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/common_temp_height_1"
+                android:layout_marginTop="@dimen/common_margin"
+                android:background="@color/base_bg"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/delivery_address_edit" />
+
+            <TextView
+                android:id="@+id/choose_products"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/common_margin"
+                android:layout_marginTop="@dimen/common_margin"
+                android:gravity="center"
+                android:text="选择商品"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/common_text_size_2"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/temp_line_5" />
+
+            <EditText
+                android:id="@+id/choose_products_edit"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/common_edit_height"
+                android:layout_marginLeft="@dimen/common_margin"
+                android:layout_marginRight="@dimen/common_margin"
+                android:layout_marginTop="@dimen/common_margin"
+                android:background="@drawable/shape_edit_rim_eeeeee"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@+id/choose_products_search"
+                app:layout_constraintTop_toBottomOf="@+id/choose_products"
+                android:paddingLeft="@dimen/common_padding_left"/>
+
+            <Button
+                android:id="@+id/choose_products_search"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/common_margin"
+                android:text="搜索"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/common_text_size_2"
+                app:layout_constraintBottom_toBottomOf="@+id/choose_products_edit"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/choose_products_edit" />
+
+            <View
+                android:id="@+id/temp_line_6"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/common_temp_height_1"
+                android:layout_marginTop="@dimen/common_margin"
+                android:background="@color/base_bg"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/choose_products_edit" />
+
+            <TextView
+                android:id="@+id/date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/common_margin"
+                android:layout_marginTop="@dimen/common_margin"
+                android:gravity="center"
+                android:text="日期"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/common_text_size_2"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/temp_line_6" />
+
+            <TextView
+                android:id="@+id/date_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="@+id/date"
+                app:layout_constraintBottom_toBottomOf="@+id/date"
+                app:layout_constraintRight_toRightOf="parent"
+                android:layout_marginRight="@dimen/common_margin"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/common_text_size_2"/>
+            <View
+                android:id="@+id/temp_line_7"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/common_temp_height_2"
+                android:layout_marginTop="15dp"
+                android:background="@color/base_bg"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/date"/>
+
+            <TextView
+                android:id="@+id/commodity_list"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/common_margin"
+                android:layout_marginTop="@dimen/common_margin"
+                android:gravity="center"
+                android:text="日期"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/common_text_size_2"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/temp_line_6" />
+
+            <TextView
+                android:id="@+id/total_prices"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="@+id/commodity_list"
+                app:layout_constraintBottom_toBottomOf="@+id/commodity_list"
+                app:layout_constraintRight_toRightOf="parent"
+                android:layout_marginRight="@dimen/common_margin"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/common_text_size_2"/>
+            <View
+                android:id="@+id/temp_line_8"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/common_temp_height_1"
+                android:layout_marginTop="@dimen/common_margin"
+                android:background="@color/base_bg"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/commodity_list"/>
+
+            <LinearLayout
+                android:id="@+id/commodity_list_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/temp_line_8"/>
+
+            <Button
+                android:id="@+id/save"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/common_order_button_height"
+                android:background="@android:color/holo_red_light"
+                app:layout_constraintTop_toBottomOf="@+id/commodity_list_layout"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:text="保存"
+                android:textSize="@dimen/common_text_size_2"
+                android:textColor="@android:color/white"/>
+        </android.support.constraint.ConstraintLayout>
+    </ScrollView>
+
+
+</android.support.constraint.ConstraintLayout>

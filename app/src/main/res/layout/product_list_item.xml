@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/white">
+
+    <TextView
+        android:id="@+id/product_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginTop="@dimen/common_margin"
+        android:layout_marginLeft="@dimen/common_margin"
+        android:textSize="@dimen/common_text_size_1"
+        android:textColor="@android:color/black"
+        android:text="品名"/>
+
+    <TextView
+        android:id="@+id/product_name_value"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/common_margin"
+        android:layout_marginRight="@dimen/common_margin"
+        android:gravity="left"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/common_text_size_1"
+        app:layout_constraintBottom_toBottomOf="@+id/product_name"
+        app:layout_constraintLeft_toRightOf="@+id/product_name"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/product_name" />
+
+
+    <TextView
+        android:id="@+id/specification"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/product_name"
+        app:layout_constraintLeft_toLeftOf="@+id/product_name"
+        android:layout_marginTop="@dimen/common_margin_top"
+        android:textSize="@dimen/common_text_size_1"
+        android:textColor="@android:color/black"
+        android:text="规格"/>
+
+    <TextView
+        android:id="@+id/specification_value"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/common_margin"
+        android:layout_marginRight="@dimen/common_margin"
+        android:gravity="left"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/common_text_size_1"
+        app:layout_constraintBottom_toBottomOf="@+id/specification"
+        app:layout_constraintLeft_toRightOf="@+id/specification"
+        app:layout_constraintTop_toTopOf="@+id/specification"/>
+
+    <TextView
+        android:id="@+id/warehouse"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/common_margin"
+        android:layout_marginRight="@dimen/common_margin"
+        android:gravity="left"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/common_text_size_1"
+        android:text="库房"
+        app:layout_constraintBottom_toBottomOf="@+id/specification"
+        app:layout_constraintLeft_toRightOf="@+id/specification_value"
+        app:layout_constraintTop_toTopOf="@+id/specification"/>
+
+    <TextView
+        android:id="@+id/warehouse_value"
+        android:layout_width="@dimen/common_edit_width"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/common_margin"
+        android:layout_marginRight="@dimen/common_margin"
+        android:gravity="left"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/common_text_size_1"
+        app:layout_constraintBottom_toBottomOf="@+id/specification"
+        app:layout_constraintLeft_toRightOf="@+id/warehouse"
+        app:layout_constraintTop_toTopOf="@+id/specification"/>
+
+    <TextView
+        android:id="@+id/manufacturers"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/specification"
+        app:layout_constraintLeft_toLeftOf="@+id/product_name"
+        android:layout_marginTop="@dimen/common_margin_top"
+        android:textSize="@dimen/common_text_size_1"
+        android:textColor="@android:color/black"
+        android:text="厂家"/>
+
+    <TextView
+        android:id="@+id/manufacturers_value"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/common_margin"
+        android:layout_marginRight="@dimen/common_margin"
+        android:gravity="left"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/common_text_size_1"
+        app:layout_constraintBottom_toBottomOf="@+id/manufacturers"
+        app:layout_constraintLeft_toRightOf="@+id/product_name"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/manufacturers" />
+
+    <TextView
+        android:id="@+id/inventory"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/manufacturers"
+        app:layout_constraintLeft_toLeftOf="@+id/product_name"
+        android:layout_marginTop="@dimen/common_margin_top"
+        android:textSize="@dimen/common_text_size_1"
+        android:textColor="@android:color/black"
+        android:text="库存"/>
+
+    <TextView
+        android:id="@+id/inventory_value"
+        android:layout_width="@dimen/common_edit_width"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/common_margin"
+        android:layout_marginRight="@dimen/common_margin"
+        android:gravity="left"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/common_text_size_1"
+        app:layout_constraintBottom_toBottomOf="@+id/inventory"
+        app:layout_constraintLeft_toRightOf="@+id/inventory"
+        app:layout_constraintTop_toTopOf="@+id/inventory"/>
+
+    <TextView
+        android:id="@+id/batch_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/common_margin"
+        android:layout_marginRight="@dimen/common_margin"
+        android:gravity="left"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/common_text_size_1"
+        android:text="批号"
+        app:layout_constraintBottom_toBottomOf="@+id/inventory"
+        app:layout_constraintLeft_toRightOf="@+id/inventory_value"
+        app:layout_constraintTop_toTopOf="@+id/inventory"/>
+
+    <TextView
+        android:id="@+id/batch_number_value"
+        android:layout_width="@dimen/common_edit_width"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/common_margin"
+        android:layout_marginRight="@dimen/common_margin"
+        android:gravity="left"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/common_text_size_1"
+        app:layout_constraintBottom_toBottomOf="@+id/inventory"
+        app:layout_constraintLeft_toRightOf="@+id/batch_number"
+        app:layout_constraintTop_toTopOf="@+id/inventory"/>
+
+    <TextView
+        android:id="@+id/product_data"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/inventory"
+        app:layout_constraintLeft_toLeftOf="@+id/inventory"
+        android:layout_marginTop="@dimen/common_margin_top"
+        android:textSize="@dimen/common_text_size_1"
+        android:textColor="@android:color/black"
+        android:text="生产日期"/>
+
+    <TextView
+        android:id="@+id/product_data_value"
+        android:layout_width="@dimen/common_edit_width"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/common_margin"
+        android:layout_marginRight="@dimen/common_margin"
+        android:gravity="left"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/common_text_size_1"
+        app:layout_constraintBottom_toBottomOf="@+id/product_data"
+        app:layout_constraintLeft_toRightOf="@+id/product_data"
+        app:layout_constraintTop_toTopOf="@+id/product_data"/>
+
+    <TextView
+        android:id="@+id/price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/common_margin"
+        android:layout_marginRight="@dimen/common_margin"
+        android:gravity="left"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/common_text_size_1"
+        android:text="价格"
+        app:layout_constraintBottom_toBottomOf="@+id/product_data"
+        app:layout_constraintLeft_toRightOf="@+id/product_data_value"
+        app:layout_constraintTop_toTopOf="@+id/product_data"/>
+
+    <TextView
+        android:id="@+id/price_value"
+        android:layout_width="@dimen/common_edit_width"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/common_margin"
+        android:layout_marginRight="@dimen/common_margin"
+        android:gravity="left"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/common_text_size_1"
+        app:layout_constraintBottom_toBottomOf="@+id/product_data"
+        app:layout_constraintLeft_toRightOf="@+id/price"
+        app:layout_constraintTop_toTopOf="@+id/product_data"/>
+
+    <TextView
+        android:id="@+id/guide_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/product_data"
+        app:layout_constraintLeft_toLeftOf="@+id/product_data"
+        android:layout_marginTop="@dimen/common_margin"
+        android:textSize="@dimen/common_text_size_1"
+        android:textColor="@android:color/black"
+        android:text="指导价格"/>
+
+    <TextView
+        android:id="@+id/guide_price_value"
+        android:layout_width="@dimen/common_edit_width"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/common_margin"
+        android:layout_marginRight="@dimen/common_margin"
+        android:gravity="left"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/common_text_size_1"
+        app:layout_constraintBottom_toBottomOf="@+id/guide_price"
+        app:layout_constraintLeft_toRightOf="@+id/guide_price"
+        app:layout_constraintTop_toTopOf="@+id/guide_price"/>
+
+    <TextView
+        android:id="@+id/reference_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/common_margin"
+        android:layout_marginRight="@dimen/common_margin"
+        android:gravity="left"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/common_text_size_1"
+        android:text="参考价格"
+        app:layout_constraintBottom_toBottomOf="@+id/guide_price"
+        app:layout_constraintLeft_toRightOf="@+id/guide_price_value"
+        app:layout_constraintTop_toTopOf="@+id/guide_price"/>
+
+    <TextView
+        android:id="@+id/reference_price_value"
+        android:layout_width="@dimen/common_edit_width"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/common_margin"
+        android:layout_marginRight="@dimen/common_margin"
+        android:gravity="left"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/common_text_size_1"
+        app:layout_constraintBottom_toBottomOf="@+id/reference_price"
+        app:layout_constraintLeft_toRightOf="@+id/reference_price"
+        app:layout_constraintTop_toTopOf="@+id/reference_price"/>
+    <TextView
+        android:id="@+id/last"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/guide_price"
+        app:layout_constraintLeft_toLeftOf="@+id/guide_price"
+        android:layout_marginTop="@dimen/common_margin"
+        android:textSize="@dimen/common_text_size_1"
+        android:textColor="@android:color/black"
+        android:text="最后"/>
+
+    <TextView
+        android:id="@+id/last_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/common_margin"
+        android:layout_marginRight="@dimen/common_margin"
+        android:gravity="left"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/common_text_size_1"
+        app:layout_constraintBottom_toBottomOf="@+id/last"
+        app:layout_constraintLeft_toRightOf="@+id/last"
+        app:layout_constraintTop_toTopOf="@+id/last"/>
+
+</android.support.constraint.ConstraintLayout>
